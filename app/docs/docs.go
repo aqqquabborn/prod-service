@@ -14,7 +14,24 @@ const docTemplate = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/api/heartbeat/": {
+            "get": {
+                "tags": [
+                    "Metrics"
+                ],
+                "summary": "Heartbeat metric",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
+        }
+    }
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it

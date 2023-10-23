@@ -9,7 +9,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
-	_ "prod-service/app/cmd/app/docs"
+	_ "prod-service/app/docs"
 	"prod-service/app/internal/config"
 	"prod-service/app/pkg/logging"
 	"prod-service/app/pkg/metric"

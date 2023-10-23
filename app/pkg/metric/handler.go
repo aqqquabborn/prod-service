@@ -4,7 +4,7 @@ import (
 	"log"
 	"net/http"
 
-	_ "prod-service/app/cmd/app/docs"
+	_ "prod-service/app/docs"
 
 	"github.com/julienschmidt/httprouter"
 )
@@ -16,7 +16,6 @@ const (
 type Handler struct {
 }
 
-// !!!!
 func (h *Handler) Register(router *httprouter.Router) {
 	router.HandlerFunc(http.MethodGet, URL, h.Heartbeat)
 }
